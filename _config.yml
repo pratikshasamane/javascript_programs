@@ -5,3 +5,24 @@ include:
   - Render movies data
   - Renders a country ONLY based on GPS coordinates
   # Add more subdirectories here if needed
+
+# Jekyll Configuration
+# Do not specify the subdirectories here in the Source dropdown.
+
+# Configuration for Project 1
+project1:
+  title: "Guess-Number"
+  description: "Description for Project 1"
+  # Add more project-specific configurations here
+
+# Configuration for Project 2
+project2:
+  title: "Modal-Window"
+  description: "Description for Project 2"
+  # Add more project-specific configurations here
+
+# Configuration for Project 3
+project3:
+  title: "Pig-Game"
+  description: "Description for Project 3"
+  # Add more project-specific configurations here
