@@ -1,0 +1,7 @@
+include:
+  - Guess-Number
+  - Modal-Window
+  - Pig-Game
+  - Render movies data
+  - Renders a country ONLY based on GPS coordinates
+  # Add more subdirectories here if needed
