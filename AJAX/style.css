@@ -27,7 +27,7 @@ body {
 }
 
 .countries {
-  /* margin-bottom: 8rem; */
+  margin-top: 32px;
   display: flex;
 
   font-size: 2rem;
@@ -123,4 +123,38 @@ body {
   margin: 2rem;
   border: 3rem solid white;
   box-shadow: 0 2rem 5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 25px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+#searchInput {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 8px;
+  flex: 1;
+  border-radius: 25px 0 0 25px;
+}
+
+#searchButton {
+  background-color: #8a2be2;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  padding: 8px 16px;
+  border-radius: 0 25px 25px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#searchButton:hover {
+  background-color: #6a1ea9;
 }
