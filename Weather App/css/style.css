@@ -65,6 +65,13 @@ body {
   padding: 2.5rem 3.75rem 3rem 3.75rem;
 }
 
+.heading {
+  color: white;
+  text-align: center;
+  font-size: 5rem;
+  margin-bottom: 4rem;
+  font-family: cursive;
+}
 .weather_name {
   font-size: 2.7rem;
   margin-bottom: 0.7rem;
