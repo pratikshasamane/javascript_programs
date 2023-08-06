@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Astrome assesment test</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+      #container {
+        position: absolute;
+        top: 9%;
+        width: 625px;
+        padding: 10px;
+        height: 184px;
+        margin-top: 100px;
+        border: 1px solid #ccc;
+        display: flex;
+        align-items: flex-end;
+        background: #000004;
+      }
+
+      .block {
+        width: 133px;
+        height: 175px;
+        margin-right: 0px;
+        background-color: #f44336;
+        transition: height 0.5s;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+
+      .block1 {
+        background-color: #7148c7;
+        animation-delay: 0s;
+        animation-name: bounce1;
+      }
+
+      .block2 {
+        background-color: #db4baa;
+        animation-delay: 0.2s;
+        animation-name: bounce2;
+      }
+
+      .block3 {
+        background-color: #fc6271;
+        animation-delay: 0.4s;
+        animation-name: bounce3;
+      }
+
+      .block4 {
+        background-color: #fc906a;
+        animation-delay: 0.6s;
+        animation-name: bounce4;
+      }
+
+      .block5 {
+        background-color: #fcc555;
+        animation-delay: 0.8s;
+        animation-name: bounce5;
+      }
+
+      @keyframes bounce1 {
+        0% {
+          height: 30px;
+        }
+        50% {
+          height: 150px;
+        }
+        100% {
+          height: 30px;
+        }
+      }
+
+      @keyframes bounce2 {
+        0% {
+          height: 50px;
+        }
+        50% {
+          height: 100px;
+        }
+        100% {
+          height: 175px;
+        }
+      }
+
+      @keyframes bounce3 {
+        0% {
+          height: 50px;
+        }
+        50% {
+          height: 120px;
+        }
+        100% {
+          height: 140px;
+        }
+      }
+
+      @keyframes bounce4 {
+        0% {
+          height: 100px;
+        }
+        50% {
+          height: 180px;
+        }
+        100% {
+          height: 100px;
+        }
+      }
+
+      @keyframes bounce5 {
+        0% {
+          height: 30px;
+        }
+        50% {
+          height: 150px;
+        }
+        100% {
+          height: 30px;
+        }
+      }
+
+      #controls {
+        margin-top: 20px;
+        position: fixed;
+        top: 55%;
+      }
+
+      button {
+        padding: 5px 12px 5px 13px;
+        margin-right: 10px;
+        color: lightgrey;
+        border: none;
+      }
+
+      #startBtn {
+        background-color: #008a37;
+      }
+
+      #resetBtn {
+        background-color: #7148d4;
+      }
+
+      #stopBtn {
+        background-color: #db0300;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div id="container">
+        <div class="block block1"></div>
+        <div class="block block2"></div>
+        <div class="block block3"></div>
+        <div class="block block4"></div>
+        <div class="block block5"></div>
+      </div>
+
+      <div id="controls">
+        <button id="startBtn">Start</button>
+        <button id="resetBtn">Reset</button>
+        <button id="stopBtn">Stop</button>
+      </div>
+    </div>
+
+    <script>
+      const blocks = document.querySelectorAll(".block");
+      const startBtn = document.getElementById("startBtn");
+      const stopBtn = document.getElementById("stopBtn");
+      const resetBtn = document.getElementById("resetBtn");
+      let animationId;
+
+      const initialStyles = {
+        height: "175",
+      };
+
+      function startAnimation() {
+        animationId = requestAnimationFrame(startAnimation);
+        blocks.forEach((block) => {
+          block.style.animationPlayState = "running";
+        });
+      }
+
+      function stopAnimation() {
+        cancelAnimationFrame(animationId);
+        blocks.forEach((block) => {
+          block.style.animationPlayState = "paused";
+        });
+      }
+
+      function resetAnimation() {
+        stopAnimation();
+        blocks.forEach((block) => {
+          block.style.animation = "none";
+          void block.offsetHeight;
+          block.style.animation = "";
+        });
+      }
+
+      startBtn.addEventListener("click", startAnimation);
+      stopBtn.addEventListener("click", stopAnimation);
+      resetBtn.addEventListener("click", resetAnimation);
+    </script>
+  </body>
+</html>

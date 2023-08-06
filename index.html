@@ -1,0 +1,27 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Frontend Example</title>
+  </head>
+  <body>
+    <button id="getDataButton">Get Data from Backend</button>
+    <div id="dataContainer"></div>
+
+    <script>
+      document.getElementById("getDataButton").addEventListener("click", () => {
+        fetch("http://localhost:3000/get")
+          .then((response) => response.json())
+          .then((data) => {
+            console.log(data);
+            // Update the frontend with the data received from the backend
+            document.getElementById("dataContainer").innerText =
+              JSON.stringify(data);
+          })
+          .catch((error) => {
+            console.error("Error fetching data:", error);
+          });
+      });
+    </script>
+  </body>
+</html>
