@@ -3,6 +3,13 @@
 const btn = document.querySelector(".btn-country");
 const moviesContainer = document.querySelector(".movies");
 
+var searchButton = document.getElementById("search-button");
+searchButton.addEventListener("click", function () {
+  var inputElement = document.getElementById("search-input");
+  var inputValue = inputElement.value;
+  movieData(inputValue);
+});
+
 const movieData = function (title) {
   fetch(`https://www.omdbapi.com/?t=${title}&apikey=6633dcdd`)
     .then((res) => {
@@ -46,7 +53,7 @@ const rendarMovieHTML = function (data) {
   moviesContainer.insertAdjacentHTML("beforeend", html);
 };
 
-movieData("avengers");
-movieData("avatar");
-movieData("A Beautiful Mind");
-movieData("Jaane Jaan");
+// movieData("avengers");
+// movieData("avatar");
+// movieData("A Beautiful Mind");
+// movieData("Jaane Jaan");

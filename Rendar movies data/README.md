@@ -1,6 +1,6 @@
 # Movie Data Rendering
 
-This project is a movie data rendering application that showcases strong frontend skills and API integration. It offers users a seamless experience to explore and discover movies. It's built using HTML, CSS, and JavaScript.
+This project is a movie data dynamically rendering application that showcases strong frontend skills and API integration. It offers users a seamless experience to explore and discover movies. It's built using HTML, CSS, and JavaScript.
 
 ![Demo](images/output.png)
 

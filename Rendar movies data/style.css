@@ -18,6 +18,19 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  font-family: system-ui;
+  color: #333;
+  background-color: #f7f7f7;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("./images/bg.jpg");
+  background-size: cover; /* Scale the image to cover the entire element */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  background-position: center center;
 }
 
 .container {
@@ -27,7 +40,7 @@ body {
 }
 
 .movies {
-  /* margin-bottom: 8rem; */
+  margin-top: 20px;
   display: flex;
 
   font-size: 2rem;
@@ -127,4 +140,47 @@ span._text {
   margin: 2rem;
   border: 3rem solid white;
   box-shadow: 0 2rem 5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  max-width: 300px;
+  background-color: #f2f2f2;
+  border: 2px solid #ddd;
+  border-radius: 30px;
+  padding: 5px;
+  margin: auto;
+}
+
+.heading {
+  color: white;
+  text-align: center;
+  font-size: 5rem;
+  margin-bottom: 4rem;
+  font-family: cursive;
+}
+.search-container input {
+  flex: 1;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  background-color: transparent;
+}
+
+.search-container button {
+  background-color: #5e7793;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.search-container button i {
+  font-size: 18px;
+}
+
+#search-input:focus {
+  outline: none;
 }
