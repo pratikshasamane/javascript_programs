@@ -29,7 +29,7 @@ This project is a movie data dynamically rendering application that showcases st
 1. Clone the repository to your local machine using Git:
 
    ```bash
-   git clone https://github.com/yourusername/movie-data-rendering.git
+   git clone https://github.com/pratikshasamane/movie-data-rendering.git
    ```
 
 2. Open the project directory.
