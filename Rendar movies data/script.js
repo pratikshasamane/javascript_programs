@@ -21,11 +21,23 @@ const rendarMovieHTML = function (data) {
           <img class="movie__img" src="${data.Poster}" />
           <div class="movie__data">
             <h3 class="movie__name">${data.Title}</h3>
-            <p class="movie__row"><span class="_text">Writer: </span>${data.Writer}</p>
-            <p class="movie__row"><span class="_text">Director: </span>${data.Director}</p>
-            <p class="movie__row"><span class="_text">Actors: </span>${data.Actors}</p>
-            <p class="movie__row"><span class="_text">Ratings: </span>${data.Ratings[0].Value}</p>
-            <p class="movie__row"><span class="_text">Date of Released: </span>${data.Year}</p>
+            <p class="movie__row"><span class="_text">Writer: </span>${
+              data.Writer
+            }</p>
+            <p class="movie__row"><span class="_text">Director: </span>${
+              data.Director
+            }</p>
+            <p class="movie__row"><span class="_text">Actors: </span>${
+              data.Actors
+            }</p>
+            <p class="movie__row"><span class="_text">Ratings: </span>${
+              data.Ratings[0] && data.Ratings[0]?.Value
+                ? data.Ratings[0].Value
+                : "Not Available"
+            }</p>
+            <p class="movie__row"><span class="_text">Date of Released: </span>${
+              data.Year
+            }</p>
 
         </div>
         </article>
@@ -37,4 +49,4 @@ const rendarMovieHTML = function (data) {
 movieData("avengers");
 movieData("avatar");
 movieData("A Beautiful Mind");
-movieData("Inception");
+movieData("Jaane Jaan");
