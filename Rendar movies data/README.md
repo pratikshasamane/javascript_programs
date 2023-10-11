@@ -2,7 +2,7 @@
 
 This project is a movie data rendering application that showcases strong frontend skills and API integration. It offers users a seamless experience to explore and discover movies. It's built using HTML, CSS, and JavaScript.
 
-![Output image](images/default.png)
+![Demo](images/output.png)
 
 ## Features
 
