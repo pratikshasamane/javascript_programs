@@ -4,6 +4,14 @@ This project is a movie data rendering application that showcases strong fronten
 
 ![Demo](images/output.png)
 
+## Table of Contents
+
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Credits](#Credits)
+
 ## Features
 
 - Real-time movie data rendering.
@@ -30,12 +38,20 @@ This project is a movie data rendering application that showcases strong fronten
 
 4. Explore and discover movies!
 
-### Screenshots
+### Contributing
 
-Default Page
+Contributions are welcome. If you'd like to contribute to this project, please follow these steps:
 
-Movie Data
+1. Fork the project.
+2. Create your feature branch: git checkout -b YourFeature.
+3. Commit your changes: git commit -m 'Add some feature'.
+4. Push to the branch: git push origin YourFeature.
+5. Create a new Pull Request.
 
 ### Credits
 
-This project relies on data from a movie API. Special thanks to [API Provider Name] for making this project possible.
+This project relies on data from a movie API. Special thanks to The Open Movies Database for making this project possible.
+
+### Author
+
+Partiksha Patil
